@@ -16,32 +16,6 @@ Carnegie Mellon University
 </div>
 
 
-# 🎬 Videos
-
-<table>
-  <tr>
-    <td width="33%" align="center"><b>Input</b></td>
-    <td width="33%" align="center"><b>Golden Sunlight</b></td>
-    <td width="34%" align="center"><b>Foggy</b></td>
-  </tr>
-  <tr>
-    <td colspan="3">
-      <video src="assets/demos/demo_1.mp4" autoplay loop muted playsinline controls width="100%"></video>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="3">
-      <video src="assets/demos/demo_2.mp4" autoplay loop muted playsinline controls width="100%"></video>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="3">
-      <video src="assets/demos/demo_3.mp4" autoplay loop muted playsinline controls width="100%"></video>
-    </td>
-  </tr>
-</table>
-
-
 # 🤗 Overview
 
 ![Architecture](assets/images/ECCV26_Warping_Architecture_NEW.png)
@@ -49,11 +23,15 @@ Carnegie Mellon University
 We warp the input image to enlarge small salient regions (e.g., objects, faces, eyes) to better preserve fine details in the compressed latent space during image-to-image translation. In the figure above, original latents are shown in 🟥, and warped latents in 🟩.
 
 
+# 🎬 Videos
+
+Please check our [Project Page](https://shenzheng2000.github.io/WarpI2I.github.io) for more details. 
+
+
 # 🌟 Highlights
 * **Detail-preserving** — preserves fine details in latent diffusion models.
 * **Model-agnostic** — no architectural modifications needed.
 * **Ultra-efficient** — only **0.006s** additional latency and **zero** extra learnable parameters.
-
 
 
 ## 📌 TODO Lists
