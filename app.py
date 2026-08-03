@@ -8,6 +8,11 @@ if not hasattr(_hf_hub, "cached_download"):
     _hf_hub.cached_download = _hf_hub.hf_hub_download
 
 import torch
+try:
+    import spaces
+except ImportError:
+    class spaces:
+        GPU = lambda fn: fn
 import gradio as gr
 from PIL import Image
 from torchvision import transforms
@@ -128,6 +133,7 @@ def _crop_to_fg(image_pil, mask_pil):
     return image_pil, image_pil.size
 
 
+@spaces.GPU
 def run_human_relight(image_pil, fg_mask_pil, lighting_choice):
     model = load_pix2pix(HUMAN_CKPTS[lighting_choice])
     prompt = LIGHTING_PROMPTS[lighting_choice]
@@ -161,6 +167,7 @@ def run_human_relight(image_pil, fg_mask_pil, lighting_choice):
 
 
 # ── tab 2: driving relighting ─────────────────────────────────────
+@spaces.GPU
 def run_drive_relight(image_pil, lighting_choice):
     model = load_pix2pix(DRIVE_RELIGHT_CKPTS[lighting_choice])
     prompt = LIGHTING_PROMPTS[lighting_choice]
