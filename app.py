@@ -2,6 +2,11 @@ import sys
 import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "src"))
 
+# cached_download was removed in huggingface_hub>=0.28; patch it back for diffusers==0.25.1
+import huggingface_hub as _hf_hub
+if not hasattr(_hf_hub, "cached_download"):
+    _hf_hub.cached_download = _hf_hub.hf_hub_download
+
 import torch
 import gradio as gr
 from PIL import Image
