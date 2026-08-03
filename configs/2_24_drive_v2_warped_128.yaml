@@ -1,0 +1,13 @@
+inherit: 2_24_drive_v2.yaml
+
+# -----------------------------
+# Model
+# -----------------------------
+use_yoloworld: true
+yolo_model_path: "yolov8x-world.pt"
+
+# -----------------------------
+# Warp
+# -----------------------------
+bw: 128
+warp_subfolders: ["train_A"]

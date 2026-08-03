@@ -1,0 +1,6 @@
+inherit: base.yaml
+
+# -----------------------------
+# Processing
+# -----------------------------
+center_crop: true

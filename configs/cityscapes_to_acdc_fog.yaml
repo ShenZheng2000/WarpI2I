@@ -1,0 +1,18 @@
+inherit: base.yaml
+
+# -----------------------------
+# Driving Profiles
+# -----------------------------
+exp_name: "cityscapes_to_acdc_fog_resize_286_randomcrop_256x256_hflip"
+
+model_path: "output/cyclegan_turbo/${exp_name}/checkpoints/model_25001.pkl"
+
+a2b:
+  prompt: "driving in heavy fog"
+  input_dir: "/ssd0/shenzhen/Datasets/driving/cityscapes_to_acdc_fog/test_A"
+  output_dir: "output/cyclegan_turbo/${exp_name}/result_A"
+
+b2a:
+  prompt: "driving in the day"
+  input_dir: "/ssd0/shenzhen/Datasets/driving/cityscapes_to_acdc_fog/test_B"
+  output_dir: "output/cyclegan_turbo/${exp_name}/result_B"

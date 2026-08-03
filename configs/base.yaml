@@ -1,0 +1,43 @@
+# -----------------------------
+# Model
+# -----------------------------
+use_fp16: false
+use_yoloworld: false
+yolo_model_path: ""
+
+# -----------------------------
+# Processing
+# -----------------------------
+target_size: 784
+crop_resize_size: null
+center_crop: false
+keep_aspect: false
+
+# -----------------------------
+# Warp
+# -----------------------------
+separable: true
+
+bw: 0
+include_eyes: false
+
+bbox_json: null
+warp_subfolders: null
+
+
+# -----------------------------
+# Driving Profiles
+# -----------------------------
+image_prep: "no_resize"
+
+model_path: ""
+
+a2b:
+  prompt: ""
+  input_dir: ""
+  output_dir: ""
+
+b2a:
+  prompt: ""
+  input_dir: ""
+  output_dir: ""

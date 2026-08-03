@@ -1,0 +1,23 @@
+inherit: BDD100K_clear2rainy.yaml
+
+# -----------------------------
+# Driving Profiles
+# -----------------------------
+exp_name: "BDD100K_clear2rainy_warped_128_resize_286_randomcrop_256x256_hflip"
+
+model_path: "output/cyclegan_turbo/{exp_name}/checkpoints/model_25001.pkl"
+
+a2b:
+  output_dir: "output/cyclegan_turbo/{exp_name}/result_A"
+
+b2a:
+  output_dir: "output/cyclegan_turbo/{exp_name}/result_B"
+
+# -----------------------------
+# Warp
+# -----------------------------
+bw: 128
+warp_subfolders: ["train_A", "train_B"]
+bbox_json:
+  - /ssd0/shenzhen/Datasets/driving/BDD100K/100k/coco_labels/det_train_coco.json
+  - /ssd0/shenzhen/Datasets/driving/BDD100K/100k/coco_labels/det_val_coco.json

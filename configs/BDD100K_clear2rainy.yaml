@@ -1,0 +1,18 @@
+inherit: base.yaml
+
+# -----------------------------
+# Driving Profiles
+# -----------------------------
+exp_name: "BDD100K_clear2rainy"
+
+model_path: "pretrained/clear2rainy.pkl"
+
+a2b:
+  prompt: "driving in heavy rain"
+  input_dir: "/ssd0/shenzhen/Datasets/driving/BDD100K_clear2rainy/test_A"
+  output_dir: "output/cyclegan_turbo/${exp_name}/result_A"
+
+b2a:
+  prompt: "driving in the day"
+  input_dir: "/ssd0/shenzhen/Datasets/driving/BDD100K_clear2rainy/test_B"
+  output_dir: "output/cyclegan_turbo/${exp_name}/result_B"

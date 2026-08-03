@@ -1,0 +1,18 @@
+inherit: base.yaml
+
+# -----------------------------
+# Driving Profiles
+# -----------------------------
+exp_name: "pretrained_day2night"
+
+model_path: "pretrained/day2night.pkl"
+
+a2b:
+  prompt: "driving in the night"
+  input_dir: "/ssd0/shenzhen/Datasets/driving/BDD100K_day2night/test_A"
+  output_dir: "output/cyclegan_turbo/${exp_name}/result_A"
+
+b2a:
+  prompt: "driving in the day"
+  input_dir: "/ssd0/shenzhen/Datasets/driving/BDD100K_day2night/test_B"
+  output_dir: "output/cyclegan_turbo/${exp_name}/result_B"

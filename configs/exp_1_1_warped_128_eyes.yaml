@@ -1,0 +1,8 @@
+inherit: exp_1_1.yaml
+
+# -----------------------------
+# Warp
+# -----------------------------
+bw: 128
+include_eyes: true
+warp_subfolders: ["train_A"]
